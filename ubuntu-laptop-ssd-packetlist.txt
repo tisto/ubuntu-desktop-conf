@@ -1,0 +1,106 @@
+################################################################################
+# How To Install Ubuntu 10.04 Lucid Lynx on a Laptop with an SSD.
+################################################################################
+
+# ------------------------------------------------------------------------------
+# Update System
+# ------------------------------------------------------------------------------
+aptitude update
+aptitude dist-upgrade
+
+# ------------------------------------------------------------------------------
+# Allgemein
+# ------------------------------------------------------------------------------
+aptitude install build-essential
+aptitude install subversion
+aptitude install rar unrar unzip
+#aptitude install smartmontools
+
+# ------------------------------------------------------------------------------
+# Internet
+# ------------------------------------------------------------------------------
+aptitude install xchat gftp nmap
+aptitude install flashplugin-installer flashplugin-nonfree
+
+# ------------------------------------------------------------------------------
+# Appearance
+# ------------------------------------------------------------------------------
+#apt-get install compizconfig-settings-manager
+
+# ------------------------------------------------------------------------------
+# Thunderbird
+# ------------------------------------------------------------------------------
+aptitude install thunderbird thunderbird-locale-de thunderbird-enigmail thunderbird-gnome-support
+
+# ------------------------------------------------------------------------------
+# Hamster
+# ------------------------------------------------------------------------------
+#aptitude install hamster-applet
+
+# ------------------------------------------------------------------------------
+# Multimedia
+# ------------------------------------------------------------------------------
+#aptitude install gstreamer0.10-ffmpeg gstreamer0.10-fluendo-mp3 gstreamer0.10-plugins-ugl
+
+# ------------------------------------------------------------------------------
+# Eclipse
+# ------------------------------------------------------------------------------
+#aptitude install eclipse
+#aptitude install libsvn-java # required by subclipse
+
+# ------------------------------------------------------------------------------
+# Python 2.6
+# ------------------------------------------------------------------------------
+aptitude install python python-dev vim-python python-imaging
+aptitude install python-lxml python-pyrex libxslt1-dev
+aptitude install python-profiler # functional tests
+aptitude install gettext poedit # i18ndude
+
+# PIL
+aptitude install zlib1g-dev
+aptitude install libfreetype6 libfreetype6-dev
+aptitude install libjpeg62 libjpeg62-dev
+
+wget http://python-distribute.org/distribute_setup.py
+python2.6 distribute_setup.py
+
+easy_install ipython ipdb i18ndude ZopeSkel
+
+# Plone
+aptitude install enscript # for test-coverage
+
+# ------------------------------------------------------------------------------
+# Python 2.4
+# ------------------------------------------------------------------------------
+#wget http://www.python.org/ftp/python/2.4.6/Python-2.4.6.tgz
+#tar xfvz Python-2.4.6.tgz
+#cd Python-2.4.6
+#./configure
+#make
+#make install
+#cd ..
+#rm -dfr Python-2.4.6
+#
+# PIL for Python 2.4
+#wget http://effbot.org/downloads/Imaging-1.1.7.tar.gz
+#tar xfvz Imaging-1.1.7.tar.gz
+#cd Imaging-1.1.7
+#python2.4 setup.py install
+#cd ..
+#rm -dfr Imaging-1.1.7
+
+
+# ------------------------------------------------------------------------------
+# Manually
+# ------------------------------------------------------------------------------
+# - Skype
+# - Dropbox
+#
+
+#
+## DropBox
+#deb http://linux.dropbox.com/ubuntu lucid main
+#sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
+#aptitude install nautilus-dropbox
+
+

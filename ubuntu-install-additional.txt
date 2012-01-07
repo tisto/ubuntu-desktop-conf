@@ -1,0 +1,42 @@
+
+sudo apt-get install ecryptfs-utils
+ecryptfs-setup-private
+
+# Enter your login passphrase:
+# Enter your mount passphrase [leave blank to generate one]:
+# ************************************************************************
+# YOU SHOULD RECORD THIS MOUNT PASSPHRASE AND STORE IN A SAFE LOCATION:
+# 37es637ds36fa485d22e36ab8c94afb1
+# THIS WILL BE REQUIRED IF YOU NEED TO RECOVER YOUR DATA AT A LATER TIME.
+# ************************************************************************
+# Done configuring.
+# Testing mount/write/umount/read...
+# Testing succeeded.
+# Logout, and log back in to begin using your encrypted directory.
+#
+# THIS WILL BE REQUIRED IF YOU NEED TO RECOVER YOUR DATA AT A LATER TIME.
+# ************************************************************************
+#
+# Testing mount/write/umount/read...
+# Testing succeeded.
+#
+# Logout, and log back in to begin using your encrypted directory.
+#
+# timo@emma:~$ ecryptfs-unwrap-passphrase ~/.ecryptfs/wrapped-passphrase
+# Passphrase:
+# Error: Unwrapping passphrase failed [-5]
+# Info: Check the system log for more information from libecryptfs
+
+# Link .private folder into dropbox
+#
+# timo@emma:~/Dropbox$ ls -al
+# lrwxrwxrwx  1 timo timo   12 2010-06-21 08:56 .Private -> ../.Private/
+
+cd ~/Dropbox
+ln -s ~/.Private
+
+# Link regular folder into encrypted file system
+rm -dfr Arbeit
+rm -dfr Dokumente
+ln -s .Private/Arbeit
+ln -s .Private/Dokumente
