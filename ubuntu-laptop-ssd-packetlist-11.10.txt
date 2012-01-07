@@ -1,5 +1,5 @@
 ################################################################################
-# How To Install Ubuntu 11.10 Lucid Lynx on a Laptop with an SSD.
+# Package Configuration for Ubuntu 11.10 on a Vostro v131 with an SSD.
 ################################################################################
 
 # ------------------------------------------------------------------------------
@@ -9,10 +9,10 @@ apt-get update
 apt-get dist-upgrade
 
 # ------------------------------------------------------------------------------
-# Allgemein
+# Basic
 # ------------------------------------------------------------------------------
 apt-get install rar unrar unzip
-apt-get install smartmontools 
+apt-get install smartmontools
 apt-get install curl
 
 # ------------------------------------------------------------------------------
@@ -36,12 +36,20 @@ apt-get install compizconfig-settings-manager
 # ------------------------------------------------------------------------------
 # Thunderbird
 # ------------------------------------------------------------------------------
-apt-get install thunderbird thunderbird-locale-de thunderbird-enigmail thunderbird-gnome-support
+apt-get install thunderbird thunderbird-locale-de thunderbird-gnome-support
+apt-get install thunderbird-enigmail
 
 # ------------------------------------------------------------------------------
-# Hamster
+# Hamster Applet
 # ------------------------------------------------------------------------------
 apt-get install hamster-applet
+
+# ------------------------------------------------------------------------------
+# Sysmonitor Applet
+# ------------------------------------------------------------------------------
+sudo add-apt-repository ppa:alexeftimie/ppa
+sudo apt-get update
+sudo apt-get install indicator-sysmonitor
 
 # ------------------------------------------------------------------------------
 # Multimedia
@@ -63,10 +71,10 @@ apt-get install python2.6 python2.6-dev
 #apt-get install libfreetype6 libfreetype6-dev
 #apt-get install libjpeg62 libjpeg62-dev
 
-#curl http://python-distribute.org/distribute_setup.py | python2.6
-#curl https://raw.github.com/pypa/pip/master/contrib/get-pip.py | python2.6
+curl http://python-distribute.org/distribute_setup.py | python2.6
+curl https://raw.github.com/pypa/pip/master/contrib/get-pip.py | python2.6
 
-#pip install i18ndude 
+#pip install i18ndude
 #pip install ZopeSkel
 
 # Plone
@@ -98,12 +106,10 @@ apt-get install enscript # for test-coverage
 # ------------------------------------------------------------------------------
 # - Skype
 # - Dropbox
-#
+# - VirtualBox
 
 #
 ## DropBox
-#deb http://linux.dropbox.com/ubuntu lucid main 
-#sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E 
+#deb http://linux.dropbox.com/ubuntu lucid main
+#sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
 #apt-get install nautilus-dropbox
-
-
