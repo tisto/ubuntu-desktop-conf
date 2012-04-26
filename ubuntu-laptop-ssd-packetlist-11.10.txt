@@ -61,10 +61,6 @@ sudo apt-get install indicator-sysmonitor
 # Python 2.6
 # ------------------------------------------------------------------------------
 apt-get install python2.6 python2.6-dev
-#apt-get install python python-dev vim-python python-imaging
-#apt-get install python-lxml python-pyrex libxslt1-dev
-#apt-get install python-profiler # functional tests
-#apt-get install gettext poedit # i18ndude
 
 # PIL
 #apt-get install zlib1g-dev
@@ -73,6 +69,7 @@ apt-get install python2.6 python2.6-dev
 
 curl http://python-distribute.org/distribute_setup.py | python2.6
 curl https://raw.github.com/pypa/pip/master/contrib/get-pip.py | python2.6
+pip install virtualenv
 
 #pip install i18ndude
 #pip install ZopeSkel
