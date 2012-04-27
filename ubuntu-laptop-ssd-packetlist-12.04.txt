@@ -1,0 +1,112 @@
+################################################################################
+# Package Configuration for Ubuntu 11.10 on a Vostro v131 with an SSD.
+################################################################################
+
+# ------------------------------------------------------------------------------
+# Update System
+# ------------------------------------------------------------------------------
+apt-get update
+apt-get dist-upgrade
+
+# ------------------------------------------------------------------------------
+# Basic
+# ------------------------------------------------------------------------------
+apt-get install rar unrar unzip
+apt-get install smartmontools
+apt-get install curl
+
+# ------------------------------------------------------------------------------
+# Development
+# ------------------------------------------------------------------------------
+apt-get install build-essential
+apt-get install subversion
+apt-get install git
+
+# ------------------------------------------------------------------------------
+# Internet
+# ------------------------------------------------------------------------------
+apt-get install xchat gftp nmap
+apt-get install flashplugin-installer flashplugin-nonfree
+
+# ------------------------------------------------------------------------------
+# Appearance
+# ------------------------------------------------------------------------------
+apt-get install compizconfig-settings-manager
+
+# ------------------------------------------------------------------------------
+# Thunderbird
+# ------------------------------------------------------------------------------
+apt-get install thunderbird thunderbird-locale-de thunderbird-gnome-support
+apt-get install thunderbird-enigmail
+
+# ------------------------------------------------------------------------------
+# Hamster Applet
+# ------------------------------------------------------------------------------
+apt-get install hamster-applet
+
+# ------------------------------------------------------------------------------
+# Sysmonitor Applet
+# ------------------------------------------------------------------------------
+sudo add-apt-repository ppa:alexeftimie/ppa
+sudo apt-get update
+sudo apt-get install indicator-sysmonitor
+
+# ------------------------------------------------------------------------------
+# Multimedia
+# ------------------------------------------------------------------------------
+#apt-get install gstreamer0.10-ffmpeg gstreamer0.10-fluendo-mp3 gstreamer0.10-plugins-ugl
+
+
+# ------------------------------------------------------------------------------
+# Python 2.6
+# ------------------------------------------------------------------------------
+apt-get install python2.7 python2.7-dev
+
+# PIL
+#apt-get install zlib1g-dev
+#apt-get install libfreetype6 libfreetype6-dev
+#apt-get install libjpeg62 libjpeg62-dev
+
+curl http://python-distribute.org/distribute_setup.py | python2.6
+curl https://raw.github.com/pypa/pip/master/contrib/get-pip.py | python2.6
+pip install virtualenv
+
+#pip install i18ndude
+#pip install ZopeSkel
+
+# Plone
+apt-get install enscript # for test-coverage
+
+# ------------------------------------------------------------------------------
+# Python 2.4
+# ------------------------------------------------------------------------------
+#wget http://www.python.org/ftp/python/2.4.6/Python-2.4.6.tgz
+#tar xfvz Python-2.4.6.tgz
+#cd Python-2.4.6
+#./configure
+#make
+#make install
+#cd ..
+#rm -dfr Python-2.4.6
+#
+# PIL for Python 2.4
+#wget http://effbot.org/downloads/Imaging-1.1.7.tar.gz
+#tar xfvz Imaging-1.1.7.tar.gz
+#cd Imaging-1.1.7
+#python2.4 setup.py install
+#cd ..
+#rm -dfr Imaging-1.1.7
+
+
+# ------------------------------------------------------------------------------
+# Manually
+# ------------------------------------------------------------------------------
+# - Skype
+# - Dropbox
+# - VirtualBox
+
+#
+## DropBox
+#deb http://linux.dropbox.com/ubuntu lucid main
+#sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
+#apt-get install nautilus-dropbox
