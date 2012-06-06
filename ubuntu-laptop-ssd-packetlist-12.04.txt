@@ -25,7 +25,7 @@ apt-get install git
 # -----------------------------------------------------------------------------
 # Internet
 # -----------------------------------------------------------------------------
-apt-get install xchat gftp nmap
+apt-get install xchat xchat-indicator gftp nmap
 apt-get install flashplugin-installer flashplugin-nonfree
 
 # -----------------------------------------------------------------------------
@@ -57,9 +57,12 @@ apt-get install hamster-indicator
 apt-get install python2.7 python2.7-dev
 
 # PIL
-#apt-get install zlib1g-dev
-#apt-get install libfreetype6 libfreetype6-dev
-#apt-get install libjpeg62 libjpeg62-dev
+apt-get install zlib1g-dev
+apt-get install libfreetype6 libfreetype6-dev
+apt-get install libjpeg62 libjpeg62-dev
+
+# LXML
+apt-get install libxslt1-dev libxml2-dev
 
 curl http://python-distribute.org/distribute_setup.py | python
 curl https://raw.github.com/pypa/pip/master/contrib/get-pip.py | python
