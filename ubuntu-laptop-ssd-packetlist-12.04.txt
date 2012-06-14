@@ -75,6 +75,26 @@ pip install virtualenv
 apt-get install enscript # for test-coverage
 
 # ------------------------------------------------------------------------------
+# Python 2.6
+# ------------------------------------------------------------------------------
+wget http://python.org/ftp/python/2.6.8/Python-2.6.8.tgz
+tar xfvz Python-2.6.8.tgz 
+cd Python-2.6.8/
+./configure --prefix=/opt/python-2.6/
+make
+make install
+cd ..
+rm -rf Python-2.6.8*
+
+wget http://effbot.org/downloads/Imaging-1.1.7.tar.gz
+tar xfvz Imaging-1.1.7.tar.gz
+cd Imaging-1.1.7/
+/opt/python-2.6/bin/python setup.py install
+cd ..
+rm -rf Imaging-1.1.7*
+
+
+# ------------------------------------------------------------------------------
 # Python 2.4
 # ------------------------------------------------------------------------------
 #wget http://www.python.org/ftp/python/2.4.6/Python-2.4.6.tgz
