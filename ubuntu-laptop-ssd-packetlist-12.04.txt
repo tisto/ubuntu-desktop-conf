@@ -77,12 +77,16 @@ apt-get install enscript # for test-coverage
 # ------------------------------------------------------------------------------
 # Python 2.6
 # ------------------------------------------------------------------------------
+# http://lipyrary.blogspot.de/2011/05/how-to-compile-python-on-ubuntu-1104.html
 wget http://python.org/ftp/python/2.6.8/Python-2.6.8.tgz
 tar xfvz Python-2.6.8.tgz 
 cd Python-2.6.8/
+make distclean
+export LDFLAGS="-L/usr/lib/$(dpkg-architecture -qDEB_HOST_MULTIARCH)"
 ./configure --prefix=/opt/python-2.6/
 make
 make install
+unset LDFLAGS
 cd ..
 rm -rf Python-2.6.8*
 
