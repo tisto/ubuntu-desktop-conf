@@ -119,6 +119,16 @@ rm -rf Imaging-1.1.7*
 #cd ..
 #rm -dfr Imaging-1.1.7
 
+# ------------------------------------------------------------------------------
+# Buildout Coredev
+# ------------------------------------------------------------------------------
+
+# Locales
+echo "en_GB.ISO8859-15 ISO-8859-15" >> /var/lib/locales/supported.d/local
+echo "en_US.ISO8859-15 ISO-8859-15" >> /var/lib/locales/supported.d/local
+echo "en_US.ISO-8859-1 ISO-8859-1" >> /var/lib/locales/supported.d/local
+dpkg-reconfigure locales
+
 
 # ------------------------------------------------------------------------------
 # Postgres
