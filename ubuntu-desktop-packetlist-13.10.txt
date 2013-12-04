@@ -1,0 +1,140 @@
+##############################################################################
+# Package Configuration for Ubuntu 13.10
+##############################################################################
+
+# ----------------------------------------------------------------------------
+# Update System
+# ----------------------------------------------------------------------------
+apt-get update
+apt-get dist-upgrade
+
+
+# ----------------------------------------------------------------------------
+# Remove Ubuntu Crap
+# ----------------------------------------------------------------------------
+apt-get remove unity-lens-music
+apt-get remove unity-lens-video
+apt-get remove unity-lens-friends
+apt-get remove unity-scope-video-remote
+apt-get remove unity-webapps-common
+
+# ----------------------------------------------------------------------------
+# Basic
+# ----------------------------------------------------------------------------
+apt-get install rar unrar unzip
+apt-get install smartmontools
+apt-get install curl
+apt-get install keepassx
+
+# ----------------------------------------------------------------------------
+# Development
+# ----------------------------------------------------------------------------
+apt-get install build-essential
+apt-get install subversion
+apt-get install git
+apt-get install apache2-utils
+apt-get install -y vagrant
+
+# ----------------------------------------------------------------------------
+# Internet
+# ----------------------------------------------------------------------------
+apt-get install xchat xchat-indicator gftp nmap
+apt-get install flashplugin-installer flashplugin-nonfree
+apt-get install gaijim
+
+# ----------------------------------------------------------------------------
+# Images
+# ----------------------------------------------------------------------------
+apt-get install -y gimp
+apt-get install -y inkscape
+
+# ----------------------------------------------------------------------------
+# Appearance
+# ----------------------------------------------------------------------------
+apt-get install unity-tweak-tool
+
+# ----------------------------------------------------------------------------
+# Thunderbird
+# ----------------------------------------------------------------------------
+apt-get install thunderbird thunderbird-locale-de thunderbird-gnome-support
+apt-get install thunderbird-enigmail
+
+
+# -----------------------------------------------------------------------------
+# Multimedia
+# -----------------------------------------------------------------------------
+apt-get install gstreamer0.10-ffmpeg gstreamer0.10-fluendo-mp3 gstreamer0.10-plugins-ugl
+
+
+# ----------------------------------------------------------------------------
+# Applets
+# ----------------------------------------------------------------------------
+apt-get install indicator-multiload
+
+
+# ----------------------------------------------------------------------------
+# Python 2.7
+# ----------------------------------------------------------------------------
+apt-get install python2.7 python2.7-dev
+
+# PIL
+apt-get install zlib1g-dev
+apt-get install libfreetype6 libfreetype6-dev
+apt-get install libjpeg62 libjpeg62-dev
+
+# LXML
+apt-get install libxslt1-dev libxml2-dev
+
+# Setuptools / PIP / Virtualenv
+wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py -O - | python2.7
+wget https://raw.github.com/pypa/pip/master/contrib/get-pip.py -O - | python2.7
+pip install virtualenv
+pip install mr.igor
+#pip install i18ndude
+#pip install ZopeSkel
+
+# Plone
+#apt-get install enscript # for test-coverage
+
+
+# ----------------------------------------------------------------------------
+# Buildout Coredev
+# ----------------------------------------------------------------------------
+
+# Locales
+echo "en_GB.ISO8859-15 ISO-8859-15" >> /var/lib/locales/supported.d/local
+echo "en_US.ISO8859-15 ISO-8859-15" >> /var/lib/locales/supported.d/local
+echo "en_US.ISO-8859-1 ISO-8859-1" >> /var/lib/locales/supported.d/local
+dpkg-reconfigure locales
+
+
+# ----------------------------------------------------------------------------
+# Node
+# ----------------------------------------------------------------------------
+
+./configure
+make
+make install
+npm install -g jshint
+npm install -g csslint
+npm install -g less
+
+
+# ----------------------------------------------------------------------------
+# Postgres
+# ----------------------------------------------------------------------------
+apt-get install postgresql
+apt-get install postgresql-client
+apt-get install postgresql-contrib
+apt-get install pgadmin3
+
+
+# ----------------------------------------------------------------------------
+# Manually
+# ----------------------------------------------------------------------------
+# - Skype
+# - Dropbox (apt-get install python-gpgme libappindicator1)
+# - VirtualBox
+# - Chrome
+# - insync
+
