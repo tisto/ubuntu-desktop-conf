@@ -1,0 +1,137 @@
+##############################################################################
+# Package Configuration for Ubuntu 14.04
+##############################################################################
+
+# ----------------------------------------------------------------------------
+# Update System
+# ----------------------------------------------------------------------------
+sudo apt-get update
+sudo apt-get dist-upgrade
+
+
+# ----------------------------------------------------------------------------
+# Basic
+# ----------------------------------------------------------------------------
+sudo apt-get install -y rar unrar unzip smartmontools curl
+
+# ----------------------------------------------------------------------------
+# Development
+# ----------------------------------------------------------------------------
+sudo apt install -y build-essential subversion git apache2-utils vagrant
+
+# ----------------------------------------------------------------------------
+# Internet
+# ----------------------------------------------------------------------------
+sudo apt install xchat xchat-indicator gftp nmap empathy keepassx
+
+
+# ----------------------------------------------------------------------------
+# Images
+# ----------------------------------------------------------------------------
+sudo apt install -y gimp inkscape
+
+
+# ----------------------------------------------------------------------------
+# Appearance
+# ----------------------------------------------------------------------------
+apt-get install unity-tweak-tool
+
+# ----------------------------------------------------------------------------
+# Thunderbird
+# ----------------------------------------------------------------------------
+apt-get install thunderbird-enigmail
+
+
+# ----------------------------------------------------------------------------
+# Applets
+# ----------------------------------------------------------------------------
+apt-get install indicator-multiload
+
+
+# ----------------------------------------------------------------------------
+# Python 2.7
+# ----------------------------------------------------------------------------
+sudo apt install -y python2.7 python2.7-dev
+
+# PIL
+sudo apt install -y zlib1g-dev libfreetype6 libfreetype6-dev libjpeg62 libjpeg62-dev
+
+# LXML
+sudo apt install -y libxslt1-dev libxml2-dev
+
+# Setuptools / PIP / Virtualenv
+wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py -O - | sudo python2.7
+wget https://raw.github.com/pypa/pip/master/contrib/get-pip.py -O - | sudo python2.7
+sudo pip install virtualenv
+#pip install mr.igor
+#pip install i18ndude
+#pip install ZopeSkel
+
+# Plone
+#apt-get install enscript # for test-coverage
+
+
+# ----------------------------------------------------------------------------
+# Buildout Coredev
+# ----------------------------------------------------------------------------
+
+# Locales
+echo "en_GB.ISO8859-15 ISO-8859-15" >> /var/lib/locales/supported.d/local
+echo "en_US.ISO8859-15 ISO-8859-15" >> /var/lib/locales/supported.d/local
+echo "en_US.ISO-8859-1 ISO-8859-1" >> /var/lib/locales/supported.d/local
+dpkg-reconfigure locales
+
+
+# ----------------------------------------------------------------------------
+# Node
+# ----------------------------------------------------------------------------
+wget http://nodejs.org/dist/v0.10.28/node-v0.10.28.tar.gz
+tar xfvz node-v0.10.28.tar.gz
+cd node-v0.10.28
+./configure
+make
+sudo make install
+sudo npm install -g jshint
+sudo npm install -g csslint
+sudo npm install -g less
+sudo npm install -g jscs
+sudo npm install -g less
+
+# ----------------------------------------------------------------------------
+# Postgres
+# ----------------------------------------------------------------------------
+apt install -y postgresql postgresql-client postgresql-contrib pgadmin3
+
+# ----------------------------------------------------------------------------
+# Solr
+# ----------------------------------------------------------------------------
+sudo apt install -y openjdk-7-jre
+
+# ----------------------------------------------------------------------------
+# DKG
+# ----------------------------------------------------------------------------
+sudo apt-get install redis-server
+sudo apt-get install libffi-dev
+
+# ----------------------------------------------------------------------------
+# Manually
+# ----------------------------------------------------------------------------
+# - Skype
+# - Dropbox
+# - VirtualBox
+# - Chrome
+# - InSync
+# - Sublime Text
+
+# ----------------------------------------------------------------------------
+# Sublime Text
+# ----------------------------------------------------------------------------
+
+# - Enter Licence
+# - Install Package Control: https://sublime.wbond.net/installation
+# - Install Packages:
+#   * Theme Soda
+#   * Anaconda
+#   * SideBarEnhancements
+#   * AngularJS
+#   * RobotFrameworkAssistant
