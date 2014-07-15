@@ -135,3 +135,4 @@ sudo apt-get install libffi-dev
 #   * SideBarEnhancements
 #   * AngularJS
 #   * RobotFrameworkAssistant
+#   * VCS Gutter
