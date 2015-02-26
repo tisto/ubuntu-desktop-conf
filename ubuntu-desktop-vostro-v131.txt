@@ -1,0 +1,7 @@
+# Fix unstable wifi network connection
+# http://ubuntuforums.org/archive/index.php/t-2164433.html
+sudo service network-manager stop
+sudo modprobe -r iwl3945
+sudo modprobe iwl3945 disable_hw_scan=1
+sudo service network-manager start
+
