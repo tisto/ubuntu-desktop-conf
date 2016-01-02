@@ -28,15 +28,16 @@ ecryptfs-setup-private
 # Info: Check the system log for more information from libecryptfs
 
 # Link .private folder into dropbox
-#
-# timo@emma:~/Dropbox$ ls -al
-# lrwxrwxrwx  1 timo timo   12 2010-06-21 08:56 .Private -> ../.Private/
+ln -s Dropbox/.Private/ .Private
 
-cd ~/Dropbox
-ln -s ~/.Private
+# cd ~/
+# ls -al
+# lrwxrwxrwx   1 timo timo     17 Jan  2 16:33 .Private -> Dropbox/.Private/
+
 
 # Link regular folder into encrypted file system
-rm -dfr Arbeit
+cd ~/
+dfr -rm Arbeit
 rm -dfr Dokumente
-ln -s .Private/Arbeit
-ln -s .Private/Dokumente
+ln -s Private/Arbeit
+ln -s Private/Dokumente
